@@ -1,0 +1,685 @@
+// style.scss
+.totalsport {
+  padding: 1rem;
+  
+  h1 {
+    font-size: 1.4rem;
+    color: #333;
+  }
+}
+
+.hero-container {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      width: 90%;
+      max-width: 800px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .tagline {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+
+        &:hover {
+          background-color: white;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+.content-tennis{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  height: auto;
+  img{
+    width: 30%;
+    height: auto;
+    display: block;
+  }
+  @media all and (max-width:768px) {
+    img{
+      
+    }
+  }
+  @media all and (max-width:480px) {
+    img{
+
+    }
+  }
+  @media all and (max-width:1024px) {
+    img{
+
+    }
+  }
+  .big-chill{
+    h1{
+
+    }
+    p{
+      color: red;
+    }
+  }
+  .all {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      background-color: rgba(255, 255, 255, 0.7);
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+      font-size: 1.5rem;
+  
+      &:hover {
+        background-color: white;
+      }
+    }
+  
+    button:first-of-type {
+      left: 0.5rem;
+    }
+  
+    button:last-of-type {
+      right: 0.5rem;
+    }
+  
+    .product-display {
+      width: 100%;
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 1rem 3rem; // adds space to prevent items from hiding behind buttons
+  
+      .products-con {
+        flex: 0 0 auto;
+        width: 10rem;
+        height: 20rem;
+        background-color: white;
+        position: relative;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+  
+        .discription {
+          width: 100%;
+          height: 30%;
+          background-color: #ffffff41;
+          position: absolute;
+          color: black;
+          top: 70%;
+          z-index: 1;
+          margin-top: 10%;
+          text-align: center;
+          padding: 0.3rem;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  
+    // ✅ Responsive
+    @media (max-width: 768px) {
+      button {
+        font-size: 1.2rem;
+        padding: 0.4rem;
+      }
+  
+      .products-con {
+        width: 8rem;
+        height: 16rem;
+  
+        .discription {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  
+    @media (max-width: 480px) {
+      button {
+        font-size: 1rem;
+        padding: 0.3rem;
+      }
+  
+      .products-con {
+        width: 6.5rem;
+        height: 13rem;
+  
+        .discription {
+          font-size: 0.65rem;
+        }
+      }
+    }
+  }
+  
+  
+    // ✅ Responsive Design Media Queries
+    @media (max-width: 768px) {
+      .product-display {
+        gap: 0.5rem;
+        padding: 0.5rem;
+  
+        .products-con {
+          width: 8rem;
+          height: 16rem;
+  
+          .discription {
+            font-size: 0.7rem;
+          }
+        }
+      }
+  
+      button {
+        font-size: 0.8rem;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .product-display {
+        gap: 0.3rem;
+  
+        .products-con {
+          width: 6.5rem;
+          height: 13rem;
+  
+          .discription {
+            font-size: 0.65rem;
+          }
+        }
+      }
+  
+      button {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+  
+    @media (min-width: 1024px) {
+      .products-con {
+        width: 12rem;
+        height: 22rem;
+  
+        .discription {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  .homeruning {
+    width: 100%;
+    position: relative;
+  
+    img {
+      width: 100%;
+      height: auto;           // Keeps aspect ratio
+      display: block;         // Removes any default inline spacing
+      max-width: 100%;        // Prevents overflow on smaller screens
+    }
+  
+    .shop-now {
+      position: absolute;
+      top: 70%;
+      left: 5%;
+      z-index: 1;
+      border-radius: 30px;
+      background-color: #f8f8f8;
+      padding: 0.5em 1em;
+  
+      h1 {
+        color: black;
+        font-size: 1.5rem;
+        margin: 0;
+      }
+    }
+  
+    // ✅ Tablet
+    @media (max-width: 768px) {
+      img{
+        
+      }
+      .shop-now {
+        top: 65%;
+  
+        h1 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  
+    // ✅ Mobile
+    @media (max-width: 480px) {
+      .shop-now {
+        top: 60%;
+  
+        h1 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  
+
+.running{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  img{
+    width: 100%;
+  }
+
+}
+.newbalance {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  height: auto;
+  margin: 0 auto;
+  align-items: center;
+
+  img {
+    max-width: 30rem;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1024px) {
+    img {
+      max-width: 20rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    img {
+      max-width: 18rem;
+    }
+  }
+  @media (max-width: 659px) {
+    img {
+      max-width: 16rem;
+    }
+  }
+  @media (max-width: 584px) {
+    img {
+      max-width: 13rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 1rem;
+
+    img {
+      max-width: 14rem;
+    }
+  }
+}
+
+////
+.clifton-hoka {
+  position: relative; // Needed for absolutely positioned buttons
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  // background-color: #000;
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  button:first-of-type {
+    left: 0.5rem;
+  }
+
+  button:last-of-type {
+    right: 0.5rem;
+  }
+
+  .hoka-display {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    height: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 1rem 3rem; // Padding to not hide content behind buttons
+
+    img {
+      width: 16rem;
+      flex: 0 0 auto;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+  }
+
+  // ✅ Responsive styles
+  @media (max-width: 768px) {
+    button {
+      font-size: 1.2rem;
+      padding: 0.4rem;
+    }
+
+    .hoka-display {
+      padding: 1rem 2.5rem;
+
+      img {
+        width: 12rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    button {
+      font-size: 1rem;
+      padding: 0.3rem;
+    }
+
+    .hoka-display {
+      padding: 1rem 2rem;
+
+      img {
+        width: 10rem;
+      }
+    }
+  }
+}
+
+/////
+.homeruning {
+  width: 100%;
+  position: relative;
+
+  img {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .shop-now {
+    position: absolute;
+    left: 0%;
+    top: 70%;
+    z-index: 1;
+    border: 1px;
+    border-radius: 30px;
+    background-color: #f8f8f8;
+    
+    h1 {
+      color: black;
+      // Add responsive font size using viewport units and clamp()
+      font-size: clamp(1rem, 3vw, 2rem); // Min: 1rem, Preferred: 3vw, Max: 2rem
+      // Add padding for better spacing on small screens
+      padding: 0.5em 1em;
+      // Ensure text doesn't overflow on small screens
+      word-wrap: break-word;
+      // Optional: Add media queries for finer control if needed
+      @media (max-width: 768px) {
+        font-size: clamp(0.8rem, 2.5vw, 1.5rem);
+      }
+      @media (max-width: 480px) {
+        font-size: clamp(0.7rem, 2vw, 1.2rem);
+      }
+    }
+  }
+}
+.off-percent{
+  width: 100%;
+  img{
+    width: 100%;
+  }
+}
+// Brands section styles
+.brands {
+  position: relative;
+  padding: 2rem 0;
+  margin: 2rem 0;
+  
+  .divider {
+    border: none;
+    height: 1px;
+    background-color: #e1e1e1;
+    margin: 1rem 0;
+  }
+  
+  &-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+    gap: 2rem;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  &-item {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+      
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+  
+  .scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    z-index: 1;
+    border: none;
+    
+    &.left {
+      left: 10px;
+    }
+    
+    &.right {
+      right: 10px;
+    }
+    
+    svg {
+      width: 20px;
+      height: 20px;
+      color: #333;
+    }
+    
+    &:hover {
+      background-color: #f8f8f8;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .clifton-hoka{
+    img{
+      width: 5rem;
+    }
+    h1{
+      font-size: 2rem;
+    }
+  }
+  .homeruning{
+    img{
+      width: 5rem;
+    }
+    h1{
+      font-size: 2rem;
+    }
+  }
+  .hero-container {
+    .hero-image {
+      .hero-text {
+        h1 {
+          font-size: 2rem;
+        }
+        
+        .tagline {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  .off-percent{
+    img{
+      width:100%;
+    }
+  }
+  .brands {
+    padding: 1.5rem 0;
+    
+    &-item {
+      width: 100px;
+    }
+    
+    .scroll-arrow {
+      width: 35px;
+      height: 35px;
+      
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    .hero-image {
+      .hero-text {
+        h1 {
+          font-size: 1.5rem;
+        }
+        
+        .tagline {
+          font-size: 1rem;
+        }
+        
+        .cta-button {
+          padding: 8px 16px;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  
+  .totalsport h1 {
+    font-size: 2rem;
+  }
+  .off-percent{
+    img{
+      width:100%;
+    }
+  }
+  .brands {
+    padding: 1rem 0;
+    
+    &-item {
+      width: 80px;
+    }
+    
+    .scroll-arrow {
+      width: 30px;
+      height: 30px;
+      
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

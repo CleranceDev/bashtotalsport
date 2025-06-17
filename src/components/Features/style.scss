@@ -1,0 +1,48 @@
+.feat-container {
+    .divider {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+    }
+  
+    .features {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.3rem 3rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+  
+      .link {
+        text-decoration: none;
+        color: rgb(59, 59, 59);
+        font-size: 0.9rem;
+        white-space: nowrap;
+        padding: 0.4rem;
+        transition: color 0.2s ease;
+  
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  
+    /* Hide on small screens */
+    @media (max-width: 200px) {
+      .features {
+        display: none;
+      }
+  
+      .divider {
+        display: none;
+      }
+    }
+  
+    /* Adjust for medium screens */
+    @media (max-width: 768px) {
+      .features {
+        padding: 1rem;
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+  }

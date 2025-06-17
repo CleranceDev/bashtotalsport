@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+   font-family: sans-serif;
+   font-size: 1.1rem;
+}
+/* import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
+
+// For convenience, use token from Redux or localStorage in requests
+const token = localStorage.getItem('authToken');
+
+const initialState = {
+  items: [],
+  loading: false,
+  error: null,
+};
+
+const cartSlice = createSlice({
+  name: 'cart',
+  initialState,
+  reducers: {
+    // Adds a new item to the Redux cart state
+    addItem: (state, action) => {
+      const exist = state.items.find((ite) => ite.prod_id === action.payload.prod_id);
+      if (exist) {
+        alert('Product already exists');
+        return;
+      }
+      state.items.push(action.payload);
+      //state.items = state.items.concat()
+    },
+
+    // Removes an item from the Redux cart state
+    removeIt: (state, action) => {
+      state.items = state.items.filter((ite) => ite.prod_id !== action.payload.prod_id);
+    },
+
+    // Clears the entire cart
+    clearCart: (state) => {
+      state.items = [];
+    },
+
+    // Set loading state
+    setLoading: (state, action) => {
+      state.loading = action.payload;
+    },
+
+    // Set error state
+    setError: (state, action) => {
+      state.error = action.payload;
+    },
+
+    // Sets the cart from the backend response
+    setCart: (state, action) => {
+      state.items = action.payload;
+    },
+  },
+});
+
+// Async action to fetch cart items from the backend
+export const fetchCart = () => async (dispatch) => {
+  dispatch(setLoading(true));
+  try {
+    const response = await axios.get('http://localhost:3000/api/cart', {
+      headers: {
+        Authorization: `Bearer ${token}`, // Include JWT in header
+      },
+    });
+    dispatch(setCart(response.data)); // Store fetched cart data
+  } catch (error) {
+    dispatch(setError(error.message)); // Handle any errors
+  } finally {
+    dispatch(setLoading(false)); // Set loading to false once done
+  }
+};
+
+// Async action to add item to the cart on the backend
+export const addItemToCart = (item) => async (dispatch) => {
+  dispatch(setLoading(true));
+  try {
+    const response = await axios.post('http://localhost:3000/api/cart', item, {
+      headers: {
+        Authorization: `Bearer ${token}`, // Include JWT in header
+      },
+    });
+    dispatch(addItem(response.data)); // Add item to the Redux cart state
+  } catch (error) {
+    dispatch(setError(error.message)); // Handle any errors
+  } finally {
+    dispatch(setLoading(false)); // Set loading to false once done
+  }
+};
+
+// Async action to remove item from the cart on the backend
+export const removeItemFromCart = (id) => async (dispatch) => {
+  dispatch(setLoading(true));
+  try {
+    await axios.delete(`http://localhost:3000/api/cart/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`, // Include JWT in header
+      },
+    });
+    dispatch(removeIt({ prod_id: id })); // Remove item from Redux cart state
+  } catch (error) {
+    dispatch(setError(error.message)); // Handle any errors
+  } finally {
+    dispatch(setLoading(false)); // Set loading to false once done
+  }
+};
+
+// Export actions for use in components
+export const { addItem, removeIt, clearCart, setLoading, setError, setCart } = cartSlice.actions;
+export default cartSlice.reducer; */

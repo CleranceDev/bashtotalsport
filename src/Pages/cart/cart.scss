@@ -1,0 +1,168 @@
+// Variables
+$primary-color: #4361ee;
+$secondary-color: #3f37c9;
+$text-color: #2b2d42;
+$light-gray: #f8f9fa;
+$border-radius: 8px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+
+// Base Styles
+.cart {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: $text-color;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    margin-bottom: 1.5rem;
+  }
+
+  &-total {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .currency-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .total-amount {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    .user-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .user-details {
+      .user-name {
+        margin: 0;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &-items {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cart-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    transition: $transition;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .item-image-container {
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+
+      .item-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: $border-radius;
+      }
+    }
+
+    .item-details {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .item-name {
+        margin: 0 0 0.5rem 0;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .item-price {
+        margin: 0;
+        color: $primary-color;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .empty-cart-message {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    color: grey;
+  }
+}
+
+// Responsive Breakpoints
+@media (max-width: 768px) {
+  .cart {
+    padding: 0.5rem;
+
+    &-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .cart-total {
+      order: 2;
+    }
+
+    .user-info {
+      order: 1;
+    }
+
+    .cart-item {
+      flex-direction: column;
+
+      .item-image-container {
+        width: 100%;
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .cart-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .cart-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
