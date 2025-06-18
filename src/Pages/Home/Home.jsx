@@ -26,10 +26,11 @@ const Home = () => {
   const currentUser = useSelector((state)=>state.users.currentUser) 
   const itemscart = useSelector((state)=>state.cart.item) 
   const dispatch = useDispatch()
+  const API_BASE_URL = 'https://bashtotalsportbackend.onrender.com';
   const { data: productDisplay } = useQuery({
     queryKey: ['products display'],
     queryFn: async () => {
-      const response = await axios.get('http://localhost:3000/api/v1/home/display');
+      const response = await axios.get(`${API_BASE_URL}/api/v1/home/display`);
       return response.data; 
     }
   });
