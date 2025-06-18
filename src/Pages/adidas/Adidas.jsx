@@ -12,16 +12,17 @@ const Adidas = () => {
   const dispatch = useDispatch();
   const selectedProduct = useSelector((state) => state.product.selectedProduct);
   const currentUser = useSelector((state) => state.users.currentUser);
-  const { data: product, error, isLoading } = useQuery({
-    queryKey: ["adidas"],
+  const API_BASE_URL = 'https://bashtotalsportbackend.onrender.com';
+  const { data: product } = useQuery({
+    queryKey: ['products display'],
     queryFn: async () => {
-      const response = await axios.get("http://localhost:3000/api/v1/home/brand/adidas");
+      const response = await axios.get(`${API_BASE_URL}/api/v1/home/display`);
       return response.data;
     },
   });
   const orderMutate = useMutation({
     mutationFn:async(orderData)=>{
-      const res = await axios.post("http://localhost:3000/api/v1/home/order",orderData)
+      const res = await axios.post("https://bashtotalsportbackend.onrender.com/api/v1/home/order",orderData)
       return res.data
     },
     onSuccess:()=>{

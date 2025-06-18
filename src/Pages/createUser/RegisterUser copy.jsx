@@ -39,7 +39,7 @@ const RegisterUser = () => {
 
         try {
             const response = await axios.post(
-                "http://localhost:3000/api/v1/home/user/register",
+                "https://bashtotalsportbackend.onrender.com/api/v1/home/user/register",
                 values
             );
 

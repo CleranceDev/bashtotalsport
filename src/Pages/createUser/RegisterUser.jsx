@@ -27,7 +27,7 @@ const RegisterUser = () => {
   const { username, lastname, email, password, phone, address } = values;
   const registerMutate = useMutation({
     mutationFn: async (values)=>{
-      const res = await axios.post('http://localhost:3000/api/v1/home/user/register',values)
+      const res = await axios.post('https://bashtotalsportbackend.onrender.com/api/v1/home/user/register',values)
       return res.data
     },
     onSuccess:()=>{

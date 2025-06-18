@@ -24,7 +24,7 @@ const Men = () => {
   const { data: product, error, isLoading } = useQuery({
     queryKey: ["men"],
     queryFn: async () => {
-      const response = await axios.get("http://localhost:3000/api/v1/home/men");
+      const response = await axios.get("https://bashtotalsportbackend.onrender.com/api/v1/home/men");
       return response.data;
     },
   });
@@ -42,7 +42,7 @@ const Men = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/home/men/search", { search });
+      const response = await axios.post("https://bashtotalsportbackend.onrender.com/api/v1/home/men/search", { search });
       setDisplay(response.data);
     } catch (error) {
       console.error("Search failed:", error);
@@ -77,7 +77,7 @@ const Men = () => {
     };
 
     try {
-      await axios.post("http://localhost:3000/api/v1/home/order", orderData);
+      await axios.post("https://bashtotalsportbackend.onrender.com/api/v1/home/order", orderData);
       alert("Order placed successfully!");
       setModal(false);
       dispatch(clearSelectedProduct());

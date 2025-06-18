@@ -22,7 +22,7 @@ const LoginUser = () => {
   const { email, password } = values;
   const loginMutate = useMutation({
     mutationFn:async ()=>{
-      const res = await axios.post('http://localhost:3000/api/v1/home/user/login',values)
+      const res = await axios.post('https://bashtotalsportbackend.onrender.com/api/v1/home/user/login',values)
       const { token, ...user } = res.data;
       dispatch(loginUser({ user, token })); // Dispatch user and token to Redux
       localStorage.setItem('authToken', token); // Save the token to localStorage

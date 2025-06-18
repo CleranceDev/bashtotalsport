@@ -17,7 +17,7 @@ const Cart = () => {
   const orderMutate = useMutation({
     mutationKey:['order'],
     mutationFn:async(orderData)=>{
-      const res = await axios.post('http://localhost:3000/api/v1/home/order',orderData)
+      const res = await axios.post('https://bashtotalsportbackend.onrender.com/api/v1/home/order',orderData)
       return res.data
     },
     onSuccess:()=>{

@@ -16,13 +16,13 @@ const Female = () => {
   const { data: product, error, isLoading } = useQuery({
     queryKey: ["female"],
     queryFn: async () => {
-      const response = await axios.get("http://localhost:3000/api/v1/home/women");
+      const response = await axios.get("https://bashtotalsportbackend.onrender.com/api/v1/home/women");
       return response.data;
     },
   });
   const orderMutate = useMutation({
     mutationFn:async (orderData)=>{
-      const res = await axios.post("http://localhost:3000/api/v1/home/order",orderData)
+      const res = await axios.post("https://bashtotalsportbackend.onrender.com/api/v1/home/order",orderData)
       return res.data
     },
     onSuccess:()=>{

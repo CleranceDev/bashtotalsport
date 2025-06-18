@@ -29,7 +29,7 @@ const LoginUser = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:3000/api/v1/home/user/login', {
+            const response = await axios.post('https://bashtotalsportbackend.onrender.com/api/v1/home/user/login', {
                 email,
                 password
             });
