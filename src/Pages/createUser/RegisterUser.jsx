@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from 'axios';
 import { useDispatch } from "react-redux";
 import { registeredSuccess } from "../../features/userSlicer";
-import { Link, useNavigate } from "react-router-dom";
+import { data, useNavigate } from "react-router-dom";
 import './registerstyle.scss';
 import {useMutation} from '@tanstack/react-query'
 
@@ -29,13 +29,14 @@ const RegisterUser = () => {
     mutationFn: async (values)=>{
       const res = await axios.post('https://bashtotalsportbackend.onrender.com/api/v1/home/user/register',values)
       dispatch(registeredSuccess(res.data))
+      console.log(res.data)
       return res.data
     },
     onSuccess:()=>{
       alert('user created')
-      setTimeout(()=>{
-        navigate('/')
-      },500)
+      // setTimeout(()=>{
+      //   navigate('/')
+      // },500)
     },
     onError:(error)=>{
       alert('failed to register the user')
@@ -49,6 +50,7 @@ const RegisterUser = () => {
         return;
     }
     registerMutate.mutate(values)
+    
   }
   return (
     <div className="register-container">
@@ -91,7 +93,7 @@ const RegisterUser = () => {
         />
         <button type="submit">Submit</button>
       </form>
-      <Link to="/loginuser" id="login">Login</Link>
+      <a href="/loginuser" id="login">Login</a>
     </div>
   );
 };
