@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { searchingProducts } from "../../features/searchSlice.js";
 import onlinesvg from '../../../images/greendot.svg'
 import offlinesvg from '../../../images/offlinedot.svg'
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const currentUser = useSelector((state)=>state.users.currentUser)
   const dispatch = useDispatch();
@@ -63,7 +63,11 @@ const Navbar = () => {
             src={hambuger}
             alt="menu"
           />
-          <h1>bash</h1>
+          <Link to='/'>
+          
+            <h1>bash</h1>
+          </Link>
+          
         </div>
         <div className="icons-sections">
           <div
