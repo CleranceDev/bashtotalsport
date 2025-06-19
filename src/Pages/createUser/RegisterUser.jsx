@@ -28,6 +28,7 @@ const RegisterUser = () => {
   const registerMutate = useMutation({
     mutationFn: async (values)=>{
       const res = await axios.post('https://bashtotalsportbackend.onrender.com/api/v1/home/user/register',values)
+      dispatch(registeredSuccess(res.data))
       return res.data
     },
     onSuccess:()=>{
@@ -48,7 +49,6 @@ const RegisterUser = () => {
         return;
     }
     registerMutate.mutate(values)
-    dispatch(registeredSuccess(values))
   }
   return (
     <div className="register-container">
