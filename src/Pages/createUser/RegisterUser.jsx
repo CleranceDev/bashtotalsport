@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from 'axios';
 import { useDispatch } from "react-redux";
 import { registeredSuccess } from "../../features/userSlicer";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './registerstyle.scss';
 import {useMutation} from '@tanstack/react-query'
 
@@ -91,7 +91,7 @@ const RegisterUser = () => {
         />
         <button type="submit">Submit</button>
       </form>
-      <a href="/loginuser" id="login">Login</a>
+      <Link to="/loginuser" id="login">Login</Link>
     </div>
   );
 };

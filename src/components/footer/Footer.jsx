@@ -1,54 +1,55 @@
 import React from 'react';
 import { FaWallet, FaMapMarkerAlt, FaUndo, FaStore, FaMobileAlt, FaQuestionCircle, FaHome, FaTruck, FaExchangeAlt, FaUser, FaShoppingCart, FaFileAlt, FaEnvelope, FaCreditCard, FaCoins, FaShieldAlt, FaWifi, FaFilm, FaTools, FaBuilding } from 'react-icons/fa';
 import './footer.scss'
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-section">
         <h3>Customer Service</h3>
         <div className="footer-links">
-          <a href="#"><FaWallet className="icon" /> Pay your TFG Money Account online</a>
-          <a href="#"><FaTruck className="icon" /> Track your order</a>
-          <a href="#"><FaUndo className="icon" /> Log a return</a>
-          <a href="#"><FaMapMarkerAlt className="icon" /> Find your nearest store</a>
-          <a href="#"><FaMobileAlt className="icon" /> Get the Bash app</a>
+          <Link to="/"><FaWallet className="icon" /> Pay your TFG Money Account online</Link>
+          <Link to="/"><FaTruck className="icon" /> Track your order</Link>
+          <Link to="/"><FaUndo className="icon" /> Log a return</Link>
+          <Link to="/"><FaMapMarkerAlt className="icon" /> Find your nearest store</Link>
+          <Link to="/"><FaMobileAlt className="icon" /> Get the Bash app</Link>
         </div>
       </div>
 
       <div className="footer-section">
         <h3>Bash Help</h3>
         <div className="footer-links">
-          <a href="#"><FaHome className="icon" /> Bash Help home</a>
-          <a href="#"><FaTruck className="icon" /> Collect and Deliver</a>
-          <a href="#"><FaExchangeAlt className="icon" /> Returns and Refunds</a>
-          <a href="#"><FaUser className="icon" /> Profile and Login</a>
-          <a href="#"><FaShoppingCart className="icon" /> How to shop online</a>
-          <a href="#"><FaFileAlt className="icon" /> Terms & Conditions</a>
-          <a href="#"><FaEnvelope className="icon" /> Contact us</a>
+          <Link to="/"><FaHome className="icon" /> Bash Help home</Link>
+          <Link to="/"><FaTruck className="icon" /> Collect and Deliver</Link>
+          <Link to="/"><FaExchangeAlt className="icon" /> Returns and Refunds</Link>
+          <Link to="/"><FaUser className="icon" /> Profile and Login</Link>
+          <Link to="/"><FaShoppingCart className="icon" /> How to shop online</Link>
+          <Link to="/"><FaFileAlt className="icon" /> Terms & Conditions</Link>
+          <Link to="/"><FaEnvelope className="icon" /> Contact us</Link>
         </div>
       </div>
 
       <div className="footer-section">
         <h3>TFG services</h3>
         <div className="footer-links">
-          <a href="#"><FaCreditCard className="icon" /> TFG Financial Services</a>
-          <a href="#"><FaWallet className="icon" /> TFG Money Account</a>
-          <a href="#"><FaCoins className="icon" /> TFG Rewards</a>
-          <a href="#"><FaShieldAlt className="icon" /> TFG Insurance</a>
-          <a href="#"><FaWifi className="icon" /> TFG Connect airtime & data</a>
-          <a href="#"><FaFilm className="icon" /> TFG Media</a>
-          <a href="#"><FaTools className="icon" /> Repairs, valuation & ring sizing</a>
+          <Link to="/"><FaCreditCard className="icon" /> TFG Financial Services</Link>
+          <Link to="/"><FaWallet className="icon" /> TFG Money Account</Link>
+          <Link to="/"><FaCoins className="icon" /> TFG Rewards</Link>
+          <Link to="/"><FaShieldAlt className="icon" /> TFG Insurance</Link>
+          <Link to="/"><FaWifi className="icon" /> TFG Connect airtime & data</Link>
+          <Link to="/"><FaFilm className="icon" /> TFG Media</Link>
+          <Link to="/"><FaTools className="icon" /> Repairs, valuation & ring sizing</Link>
         </div>
       </div>
 
       <div className="footer-section">
         <h3>Company</h3>
         <div className="footer-links">
-          <a href="/location"><FaMapMarkerAlt className="icon" /> Store finder</a>
-          <a href="#"><FaBuilding className="icon" /> About Bash</a>
-          <a href="#"><FaBuilding className="icon" /> About TFG - The Foschini Group Ltd.</a>
-          <a href="#"><FaShieldAlt className="icon" /> Sustainability, CSI, BEE</a>
-          <a href="#"><FaUser className="icon" /> Bash Careers</a>
+          <Link to="/location"><FaMapMarkerAlt className="icon" /> Store finder</Link>
+          <Link to="/"><FaBuilding className="icon" /> About Bash</Link>
+          <Link to="/"><FaBuilding className="icon" /> About TFG - The Foschini Group Ltd.</Link>
+          <Link to="/"><FaShieldAlt className="icon" /> Sustainability, CSI, BEE</Link>
+          <Link to="/"><FaUser className="icon" /> Bash Careers</Link>
         </div>
       </div>
     </footer>

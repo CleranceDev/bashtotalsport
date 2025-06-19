@@ -69,11 +69,6 @@ const Search = () => {
                 onChange={(e)=>setSearch(e.target.value)}
               />
               <button className='button-search' type='submit'>Search</button>
-              {/* {searchMutate && <button onClick={()=>{
-                searchMutate.reset(search);
-                setSearch('')
-                className='button-clear'
-              }}>clear</button>} */}
             </form>
           </div>
          

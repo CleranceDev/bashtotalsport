@@ -20,6 +20,7 @@ import  {selectProduct} from '../../features/productSlice'
 import {useDispatch,useSelector} from 'react-redux'
 import {addItem} from '../../features/cartSlicer'
 import {useNavigate} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const navigate = useNavigate()
@@ -91,7 +92,7 @@ const Home = () => {
           <div className="hero-text">
             <h1>Commit to more</h1>
             <p className="tagline">Start. Stay consistent. Show progress.</p>
-            <a href="/brands" className="cta-button">Discover more →</a>
+            <Link to="/brands" className="cta-button">Discover more →</Link>
           </div>
         </div>
         <div className='content-tennis'>

@@ -4,7 +4,7 @@ import App from './App.jsx';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { PersistGate } from 'redux-persist/integration/react'; 
 import { Provider } from 'react-redux';
-import { configureStore, combineReducers } from '@reduxjs/toolkit'; // 👈 CHANGE HERE: imported combineReducers
+import { configureStore, combineReducers } from '@reduxjs/toolkit'; 
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import userSlice from './features/userSlicer.js';
@@ -20,7 +20,6 @@ const configureReducer = {
   storage,
 };
 
-// 👈 CHANGE HERE: combined both your user and product reducers
 const rootReducer = combineReducers({
   users: userSlice,
   product: product,
@@ -28,7 +27,7 @@ const rootReducer = combineReducers({
   cart:cartSlicer,
 });
 
-// 👈 CHANGE HERE: persisted the rootReducer (not just one reducer)
+
 const persistedReducer = persistReducer(configureReducer, rootReducer);
 
 const store = configureStore({

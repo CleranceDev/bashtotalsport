@@ -91,22 +91,6 @@ const Cart = () => {
         ) : (
           <p className="empty-cart-message">Your cart is empty</p>
         )}
-        {/* {
-          carts ?
-            (<div key={carts.prod_id} className="cart-item">
-              <div className="item-image-container">
-                <img src={carts.img} alt={carts.Prod_name} className="item-image" />
-              </div>
-              <div className="item-details">
-                <h3 className="item-name">{carts.Prod_name}</h3>
-                <p className="item-price">${carts.Price}</p>
-                <button onClick={()=>dispatch(removeIt(cart))}>Remove Product</button>
-              </div>
-            </div>
-          
-        ): (
-          <p className="empty-cart-message">Your cart is empty</p>
-        )} */}
       </div>
 
       <button onClick={sendOrder}>Check out</button>
