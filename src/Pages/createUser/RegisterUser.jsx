@@ -34,9 +34,9 @@ const RegisterUser = () => {
     },
     onSuccess:()=>{
       alert('user created')
-      // setTimeout(()=>{
-      //   navigate('/')
-      // },500)
+      setTimeout(()=>{
+        navigate('/')
+      },500)
     },
     onError:(error)=>{
       alert('failed to register the user')
