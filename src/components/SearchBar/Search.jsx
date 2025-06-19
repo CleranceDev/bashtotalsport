@@ -17,7 +17,7 @@ const Search = () => {
   const searchMutate = useMutation({
     mutationKey:['search product'],
     mutationFn:async(search)=>{
-      const response = await axios.post('http://localhost:3000/api/v1/home/allproduct/search',{
+      const response = await axios.post('https://bashtotalsportbackend.onrender.com/api/v1/home/allproduct/search',{
         search:search
       })
    
