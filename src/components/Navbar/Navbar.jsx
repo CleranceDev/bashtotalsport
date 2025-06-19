@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { searchingProducts } from "../../features/searchSlice.js";
 import onlinesvg from '../../../images/greendot.svg'
 import offlinesvg from '../../../images/offlinedot.svg'
-import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   const currentUser = useSelector((state)=>state.users.currentUser)
