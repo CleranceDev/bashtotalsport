@@ -27,7 +27,7 @@ const Navbar = () => {
     mutationKey: ["seachedMute"],
     mutationFn: async (search) => {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/home/allproduct/search",
+        "https://bashtotalsportbackend.onrender.com/api/v1/home/allproduct/search",
         {
           search: search,
         }
@@ -98,12 +98,12 @@ const Navbar = () => {
           </Link>
           {menu && (
             <div className="mobile-menu" onClick={()=>setMenu(false)}>
-              <Link className="menu-link" to="#">Features</Link>
+              <Link className="menu-link" to="/brands">Features</Link>
               <Link className="menu-link" to="shoes">Shoes</Link>
               <Link className="menu-link" to="/men">Men</Link>
               <Link className="menu-link" to="/female">Women</Link>
               <Link className="menu-link" to="kids">Kids</Link>
-              <Link className="menu-link" to="#">FanGear</Link>
+              <Link className="menu-link" to="/men">FanGear</Link>
               <Link className="menu-link" to="tech">Tech & equipment</Link>
               <Link className="menu-link" to="brands">Brands</Link>
           <button className="close-menu-btn" onClick={()=>setMenu(false)}>X</button>
